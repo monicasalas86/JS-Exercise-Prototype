@@ -139,10 +139,16 @@ console.log('task 3', moni.play());
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window binding - when 'this' is not defined, the window will be returned (the global object in node) or it will return undefined in strict mode. This is an error and we don't want it
+
+  2. Implicit binding - happens to objects with methods. When we invoke the function, whatever is left of the dot is when 'this' is refering to 
+
+  3. Explicit binding - happens when we tell a function what 'this' should be using .call .apply or .bind.
+  For .call - the function is immediately invoked and we have to pass through the arguments 1 by 1.
+  For .apply - will also immediately invoke the function and it will pass our items in an array.
+  For .bind - we have to pass in the arguments 1 by 1, however it won't invoke a function. It returns a new function that we can invoke later
+
+  4. New binding - happens when we invoke a function with the 'new' keyword. The 'this' keyword inside the function is bound to the new object that is being constructed. When we invoke a function as a constructor function using the 'new' keyword it points to the new object that was created.
 */
 
 
